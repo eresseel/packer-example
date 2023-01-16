@@ -1,0 +1,11 @@
+---
+- name: hello world
+  hosts: 127.0.0.1
+  connection: local
+
+  tasks:
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /test
+        state: directory
+        mode: '755'
